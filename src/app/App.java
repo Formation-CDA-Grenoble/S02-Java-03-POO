@@ -11,15 +11,21 @@ public class App {
 
         player.inspect();
         enemy1.inspect();
-
-        player.attack(enemy1);
         
-        player.turnLeft();
-        player.attack(enemy1);
+        // player.turnLeft();
+        // player.attack(enemy1);
+        // player.attack(enemy1);
 
-        enemy1.attack(player);
-        
         enemy1.turnRight();
+        enemy1.attack(player);
+        enemy1.attack(player);
+        enemy1.attack(player);
+        enemy1.attack(player);
+        enemy1.attack(player);
+        enemy1.attack(player);
+        enemy1.attack(player);
+        enemy1.attack(player);
+        enemy1.attack(player);
         enemy1.attack(player);
     }
 }

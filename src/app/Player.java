@@ -14,4 +14,11 @@ class Player extends Actor {
         super(name, x, y);
         health = 100;
     }
+
+    void die() {
+        super.die();
+        lives -= 1;
+        health = 100;
+        System.out.println(name + " has " + lives + " lives remaining");
+    }
 }

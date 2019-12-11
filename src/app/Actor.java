@@ -70,9 +70,16 @@ class Actor {
             otherActor.health -= 10;
             System.out.println(name + " attacks " + otherActor.name);
             System.out.println(otherActor.name + " has " + otherActor.health + " HP remaining");
+            if (otherActor.health <= 0) {
+                otherActor.die();
+            }
         } else {
             System.out.println(name + " cannot attack " + otherActor.name);    
         }
+    }
+
+    void die() {
+        System.out.println(name + " is dead");
     }
 
     void inspect() {

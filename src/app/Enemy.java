@@ -14,4 +14,10 @@ class Enemy extends Actor {
         super(name, x, y);
         health = 20;
     }
+
+    void die() {
+        super.die();
+        System.out.println(name + " gives " + loot + " points");
+        //
+    }
 }
