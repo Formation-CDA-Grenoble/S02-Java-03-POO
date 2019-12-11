@@ -1,7 +1,13 @@
 package app;
 
+import app.Player;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello Java");
+        Player player = new Player();
+
+        player.turnLeft();
+
+        System.out.println(player.direction);
     }
 }
