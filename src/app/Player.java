@@ -7,9 +7,11 @@ class Player extends Actor {
 
     Player (String name) {
         super(name, 0, 0);
+        health = 100;
     }
 
     Player (String name, int x, int y) {
         super(name, x, y);
+        health = 100;
     }
 }

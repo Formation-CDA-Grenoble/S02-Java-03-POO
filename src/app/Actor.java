@@ -51,7 +51,31 @@ class Actor {
         inspect();
     }
 
+    boolean canAttack(Actor otherActor) {
+        if (x == otherActor.x && y == otherActor.y + 1 && direction == DIRECTION_UP) {
+            return true;
+        } else if (x == otherActor.x - 1 && y == otherActor.y && direction == DIRECTION_RIGHT) {
+            return true;
+        } else if (x == otherActor.x && y == otherActor.y - 1 && direction == DIRECTION_DOWN) {
+            return true;
+        } else if (x == otherActor.x + 1 && y == otherActor.y && direction == DIRECTION_LEFT) {
+            return true;
+        } else {
+            return false;
+        }        
+    }
+
+    void attack(Actor otherActor) {
+        if (canAttack(otherActor)) {
+            otherActor.health -= 10;
+            System.out.println(name + " attacks " + otherActor.name);
+            System.out.println(otherActor.name + " has " + otherActor.health + " HP remaining");
+        } else {
+            System.out.println(name + " cannot attack " + otherActor.name);    
+        }
+    }
+
     void inspect() {
-        System.out.println(name + " is at (" + x + ", " + y + "), facing " + DIRECTION_NAMES[direction]);
+        System.out.println(name + " (" + health + " HP) is at (" + x + ", " + y + "), facing " + DIRECTION_NAMES[direction]);
     }
 }

@@ -7,9 +7,11 @@ class Enemy extends Actor {
 
     Enemy(String name) {
         super(name, 0, 0);
+        health = 20;
     }
 
     Enemy(String name, int x, int y) {
         super(name, x, y);
+        health = 20;
     }
 }
