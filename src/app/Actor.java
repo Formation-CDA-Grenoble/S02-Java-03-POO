@@ -12,6 +12,11 @@ class Actor {
     int health;
     int direction;
 
+    Actor(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
     // Déplace la personnage vers l'avant
     void moveForward() {
         if (direction == DIRECTION_UP) {

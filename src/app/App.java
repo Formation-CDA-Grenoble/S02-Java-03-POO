@@ -1,12 +1,13 @@
 package app;
 
 import app.Player;
+import app.Enemy;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Player player = new Player();
+        Player player = new Player(5, 3);
 
-        System.out.println(player.lives);
+        Enemy enemy1 = new Enemy(8, 2);
 
         player.inspect();
 
