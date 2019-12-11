@@ -6,8 +6,13 @@ public class App {
     public static void main(String[] args) throws Exception {
         Player player = new Player();
 
-        player.turnLeft();
+        player.inspect();
 
-        System.out.println(player.direction);
+        player.turnLeft();
+        player.moveForward();
+        player.turnLeft();
+        player.moveForward();
+        player.turnLeft();
+        player.moveForward();
     }
 }
