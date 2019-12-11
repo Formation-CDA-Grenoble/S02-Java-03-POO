@@ -7,12 +7,14 @@ class Actor {
     final int DIRECTION_LEFT = 3;
     final String[] DIRECTION_NAMES = new String[] {"up", "right", "down", "left"};
 
+    String name;
     int x;
     int y;
     int health;
     int direction;
 
-    Actor(int x, int y) {
+    Actor(String name, int x, int y) {
+        this.name = name;
         this.x = x;
         this.y = y;
     }
@@ -50,6 +52,6 @@ class Actor {
     }
 
     void inspect() {
-        System.out.println("Player is at (" + x + ", " + y + "), facing " + DIRECTION_NAMES[direction]);
+        System.out.println(name + " is at (" + x + ", " + y + "), facing " + DIRECTION_NAMES[direction]);
     }
 }
